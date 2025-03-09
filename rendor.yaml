@@ -1,11 +1,12 @@
 services:
   - type: web
-    name: php-app
+    name: automation-timetable
     env: docker
+    repo: https://github.com/Santhosh200429/automation-timetable-generator
     plan: free
-    region: oregon
-    buildCommand: ""
-    startCommand: "php -S 0.0.0.0:10000 -t ."
+    branch: main
+    rootDir: .
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: PORT
-        value: "10000"
+        value: 10000
